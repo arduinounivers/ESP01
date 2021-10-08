@@ -1,8 +1,7 @@
-/***************************
+//***************************
 // Import required libraries
 #include "ESP8266WiFi.h"
 #include "ESPAsyncWebServer.h"
-#include <Vcc.h>
 
 // Set to true to define Relay as Normally Open (NO)
 #define RELAY_NO    true
@@ -41,9 +40,7 @@ const char index_html[] PROGMEM = R"rawliteral(
   </style>
 </head>
 <body>
-  <h2>Vcc=</h2>
-  v;
-  <h2>LIGHTING CONTROL</h2>  //<h2>ESP Web Server</h2>
+<h2>LIGHTING CONTROL</h2>  //<h2>ESP Web Server</h2>
   %BUTTONPLACEHOLDER%
 <script>function toggleCheckbox(element) {
   var xhr = new XMLHttpRequest();
@@ -88,8 +85,6 @@ String relayState(int numRelay){
   }
   return "";
 }
-
-//Vcc vcc(VccCorrection);
 
 void setup(){
   // Serial port for debugging purposes
